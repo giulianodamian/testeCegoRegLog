@@ -17,6 +17,7 @@ from sklearn.feature_selection import RFECV
 from sklearn.model_selection import StratifiedKFold
 import seaborn as sns
 import matplotlib.pyplot as plt
+from scipy.stats import pearsonr
 import warnings
 warnings.filterwarnings('ignore')
 
@@ -43,21 +44,23 @@ def load_and_preprocess():
         bank = pd.read_csv(INPUT_FILE, encoding='utf-8').dropna()
         save_to_txt(f"Dados carregados: {bank.shape[0]} registros, {bank.shape[1]} colunas", OUTPUT_TXT)
         
-        # Tratamento de categorias raras
-        def group_rare_categories(series, threshold=0.05):
-            counts = series.value_counts(normalize=True)
-            rare_categories = counts[counts < threshold].index
-            return series.replace(rare_categories, 'Other')
-        
-        categorical_cols = bank.select_dtypes(include=['object']).columns
-        for col in categorical_cols:
-            bank[col] = group_rare_categories(bank[col])
-        
-        bank = pd.get_dummies(bank, drop_first=True)
-        save_to_txt(f"\nApós one-hot encoding: {bank.shape[1]} variáveis", OUTPUT_TXT)
+        # Verifica se há colunas categóricas
+        categorical_cols = bank.select_dtypes(include=['object', 'category']).columns
+        if not categorical_cols.empty:
+            save_to_txt(f"\nColunas categóricas detectadas: {list(categorical_cols)}", OUTPUT_TXT)
+            # Tratamento de categorias raras
+            for col in categorical_cols:
+                bank[col] = group_rare_categories(bank[col])
+            bank = pd.get_dummies(bank, drop_first=True)
+            save_to_txt(f"\nApós one-hot encoding: {bank.shape[1]} variáveis", OUTPUT_TXT)
+        else:
+            save_to_txt("\nNenhuma coluna categórica detectada.", OUTPUT_TXT)
         
         # Preparar X e y
         target_col = 'y_yes' if 'y_yes' in bank.columns else 'y'
+        if target_col not in bank.columns:
+            raise ValueError(f"Variável target '{target_col}' não encontrada no DataFrame.")
+        
         y = bank[target_col]
         X = bank.drop(columns=[target_col])
         
@@ -71,39 +74,52 @@ def load_and_preprocess():
         save_to_txt(f"\nERRO: {str(e)}", OUTPUT_TXT)
         exit()
 
+
+
+
 def plot_correlation_matrix(X, threshold):
-    """Gera e salva gráfico da matriz de correlação completa"""
+    """Gera matriz de correlação mostrando todos os pontos, mas destacando os significativos"""
     plt.figure(figsize=(15, 12))
-    corr_matrix = X.corr().abs()
     
-    # Cria máscara para esconder a diagonal principal (opcional)
+    # Calcula matriz de correlação
+    corr_matrix = X.corr()
+    
+    # Cria máscara para a diagonal principal
     mask = np.zeros_like(corr_matrix, dtype=bool)
-    np.fill_diagonal(mask, True)  # Se quiser esconder a diagonal
+    np.fill_diagonal(mask, True)
     
-    sns.heatmap(corr_matrix, 
-                mask=mask,  # Remova esta linha para mostrar tudo
-                annot=True, 
-                fmt=".2f", 
+    # Plotagem da matriz completa
+    sns.heatmap(corr_matrix,
+                mask=mask,
+                annot=True,
+                fmt=".2f",
                 cmap='coolwarm',
-                annot_kws={"size": 8}, 
-                vmin=-1, 
+                center=0,
+                vmin=-1,
                 vmax=1,
                 linewidths=0.5,
-                cbar_kws={"shrink": 0.8})
+                cbar_kws={"shrink": 0.8},
+                annot_kws={"size": 8})
     
-    plt.title(f'Matriz de Correlação Completa (|r| ≥ {threshold})', 
-              pad=20, fontsize=14)
+    # Destacar correlações acima do threshold
+    for i in range(len(corr_matrix.columns)):
+        for j in range(len(corr_matrix.columns)):
+            if i != j and abs(corr_matrix.iloc[i, j]) >= threshold:
+                plt.text(j + 0.5, i + 0.5, 
+                        f"{corr_matrix.iloc[i, j]:.2f}",
+                        ha="center", va="center",
+                        color="black", fontsize=10,
+                        bbox=dict(facecolor='white', edgecolor='black', boxstyle='round,pad=0.3'))
+    
+    plt.title(f'Matriz de Correlação (Destaque para |r| ≥ {threshold})', pad=20, fontsize=14)
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
-    
-    # Adiciona linhas para destacar a diagonal principal
-    for i in range(len(corr_matrix)):
-        plt.gca().add_patch(plt.Rectangle((i, i), 1, 1, fill=False, edgecolor='black', lw=1))
-    
     plt.tight_layout()
+    
     plt.savefig(CORR_PLOT, dpi=300, bbox_inches='tight')
     plt.close()
-    save_to_txt(f"\nMatriz de correlação completa salva em: {CORR_PLOT}", OUTPUT_TXT)
+    
+    save_to_txt(f"\nMatriz de correlação salva em: {CORR_PLOT}", OUTPUT_TXT)
     
 def remove_highly_correlated(X, threshold):
     """Remove variáveis com correlação acima do threshold"""

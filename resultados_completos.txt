@@ -3,11 +3,11 @@ RELATÓRIO DE ANÁLISE ESTATÍSTICA
 
 Dados carregados: 400 registros, 7 colunas
 
-Após one-hot encoding: 7 variáveis
+Nenhuma coluna categórica detectada.
 
 Variáveis numéricas finais: 6
 
-Matriz de correlação completa salva em: matriz_correlacao.png
+Matriz de correlação salva em: matriz_correlacao.png
 
 TRATAMENTO DE COLINEARIDADE (≥60.0%)
 
@@ -34,7 +34,7 @@ Dep. Variable:                      y   No. Observations:                  400
 Model:                          Logit   Df Residuals:                      396
 Method:                           MLE   Df Model:                            3
 Date:                Wed, 02 Apr 2025   Pseudo R-squ.:                  0.6266
-Time:                        09:56:44   Log-Likelihood:                -103.49
+Time:                        10:19:41   Log-Likelihood:                -103.49
 converged:                       True   LL-Null:                       -277.18
 Covariance Type:            nonrobust   LLR p-value:                 5.510e-75
 ==============================================================================
