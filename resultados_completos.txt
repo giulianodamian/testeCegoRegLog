@@ -9,21 +9,19 @@ Variáveis numéricas finais: 6
 
 Matriz de correlação completa salva em: matriz_correlacao.png
 
-TRATAMENTO DE COLINEARIDADE (≥60.0%)
+TRATAMENTO DE COLINEARIDADE (≥70.0%)
 
-Variáveis removidas: 1
-Variável Correlacionada com Correlação
-      X5                 X4       0.66
+Variáveis removidas: 0
 
-Variáveis após colinearidade: 5
+Variáveis após colinearidade: 6
 
 TRATAMENTO DE MULTICOLINEARIDADE (VIF > 5)
 
 Variáveis removidas: 1
  Iteração Variável Removida  VIF  Variáveis Restantes
-        1                X1 6.51                    4
+        1                X1 6.52                    5
 
-Variáveis após multicolinearidade: 4
+Variáveis após multicolinearidade: 5
 
 MODELAGEM FINAL
 
@@ -31,19 +29,20 @@ RESUMO DO MODELO FINAL:
                            Logit Regression Results                           
 ==============================================================================
 Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      396
-Method:                           MLE   Df Model:                            3
-Date:                Wed, 02 Apr 2025   Pseudo R-squ.:                  0.6266
-Time:                        08:07:50   Log-Likelihood:                -103.49
+Model:                          Logit   Df Residuals:                      395
+Method:                           MLE   Df Model:                            4
+Date:                Wed, 02 Apr 2025   Pseudo R-squ.:                  0.6407
+Time:                        09:34:44   Log-Likelihood:                -99.581
 converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                 5.510e-75
+Covariance Type:            nonrobust   LLR p-value:                 1.324e-75
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -0.3202      0.182     -1.756      0.079      -0.678       0.037
-X2            -1.6609      0.240     -6.916      0.000      -2.132      -1.190
-X3             3.7395      0.401      9.316      0.000       2.953       4.526
-X4             1.1356      0.213      5.335      0.000       0.718       1.553
+const         -0.3212      0.186     -1.731      0.083      -0.685       0.042
+X2            -1.7264      0.250     -6.896      0.000      -2.217      -1.236
+X3             3.8701      0.419      9.247      0.000       3.050       4.690
+X4             0.7226      0.256      2.818      0.005       0.220       1.225
+X5             0.6589      0.241      2.738      0.006       0.187       1.131
 ==============================================================================
 
 RANKING DE VARIÁVEIS:
@@ -51,12 +50,14 @@ Feature  Ranking  Suporte
      X2        1     True
      X3        1     True
      X4        1     True
+     X5        1     True
      X6        2    False
 
 VARIÁVEIS SIGNIFICATIVAS (p < 0.05):
        Coef.         P>|z|
-X3  3.739476  1.212018e-20
-X2 -1.660944  4.636749e-12
-X4  1.135552  9.533529e-08
+X3  3.870104  2.310272e-20
+X2 -1.726417  5.348011e-12
+X4  0.722571  4.839466e-03
+X5  0.658907  6.174452e-03
 
-Variáveis selecionadas: 3
+Variáveis selecionadas: 4
