@@ -21,7 +21,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Configurações
-COLIN_THRESHOLD = 0.6  # 60% para colinearidade
+COLIN_THRESHOLD = 0.7  # 60% para colinearidade
 VIF_THRESHOLD = 5      # Limiar para multicolinearidade
 INPUT_FILE = 'blind_test_sample.csv'
 OUTPUT_TXT = 'resultados_completos.txt'
