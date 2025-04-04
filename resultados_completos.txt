@@ -1,205 +1,755 @@
 RELATÓRIO DE ANÁLISE ESTATÍSTICA
 ==================================================
 
-Dados carregados: 400 registros, 7 colunas
 
 === ANÁLISE UNIVARIADA ===
 
---- X1 ---
+--- age ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      398
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
 Method:                           MLE   Df Model:                            1
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001692
-Time:                        13:30:28   Log-Likelihood:                -276.71
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                    0.3328
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001288
+Time:                        14:20:35   Log-Likelihood:                -14481.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 9.822e-10
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -0.5509      0.538     -1.025      0.305      -1.605       0.503
-X1            -0.0335      0.035     -0.967      0.333      -0.101       0.034
+const         -2.0673      0.016   -132.252      0.000      -2.098      -2.037
+age            0.0935      0.015      6.165      0.000       0.064       0.123
 ==============================================================================
 
---- X2 ---
+--- duration ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      398
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
 Method:                           MLE   Df Model:                            1
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.06064
-Time:                        13:30:28   Log-Likelihood:                -260.37
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                 6.721e-09
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.1687
+Time:                        14:20:35   Log-Likelihood:                -12053.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const          0.9885      0.213      4.641      0.000       0.571       1.406
-X2            -0.6646      0.120     -5.527      0.000      -0.900      -0.429
+const         -2.3488      0.019   -125.606      0.000      -2.385      -2.312
+duration       0.9480      0.015     62.484      0.000       0.918       0.978
 ==============================================================================
 
---- X3 ---
+--- campaign ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      398
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
 Method:                           MLE   Df Model:                            1
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.4456
-Time:                        13:30:28   Log-Likelihood:                -153.66
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                 1.152e-55
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.008655
+Time:                        14:20:35   Log-Likelihood:                -14374.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 1.578e-56
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -2.6196      0.284     -9.218      0.000      -3.177      -2.063
-X3             0.1282      0.012     10.538      0.000       0.104       0.152
+const         -2.0988      0.016   -129.185      0.000      -2.131      -2.067
+campaign      -0.3475      0.025    -13.644      0.000      -0.397      -0.298
 ==============================================================================
 
---- X4 ---
+--- pdays ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      398
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
 Method:                           MLE   Df Model:                            1
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.01742
-Time:                        13:30:28   Log-Likelihood:                -272.35
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                  0.001885
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.08761
+Time:                        14:20:35   Log-Likelihood:                -13229.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -0.0340      0.101     -0.335      0.737      -0.232       0.164
-X4             0.0772      0.025      3.065      0.002       0.028       0.127
+const         -2.1777      0.017   -129.623      0.000      -2.211      -2.145
+pdays         -0.5366      0.011    -50.718      0.000      -0.557      -0.516
 ==============================================================================
 
---- X5 ---
+--- previous ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      398
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
 Method:                           MLE   Df Model:                            1
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.01954
-Time:                        13:30:28   Log-Likelihood:                -271.76
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                 0.0009968
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.05242
+Time:                        14:20:35   Log-Likelihood:                -13739.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -0.0408      0.101     -0.403      0.687      -0.240       0.158
-X5             0.0797      0.025      3.233      0.001       0.031       0.128
+const         -2.1510      0.017   -130.300      0.000      -2.183      -2.119
+previous       0.4710      0.012     39.085      0.000       0.447       0.495
 ==============================================================================
 
---- X6 ---
+--- emp_var_rate ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      398
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
 Method:                           MLE   Df Model:                            1
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001894
-Time:                        13:30:28   Log-Likelihood:                -276.65
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                    0.3055
-==============================================================================
-                 coef    std err          z      P>|z|      [0.025      0.975]
-------------------------------------------------------------------------------
-const          0.1455      0.207      0.703      0.482      -0.260       0.551
-X6            -0.0036      0.004     -1.024      0.306      -0.010       0.003
-==============================================================================
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.1173
+Time:                        14:20:36   Log-Likelihood:                -12798.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
+================================================================================
+                   coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const           -2.3783      0.020   -119.837      0.000      -2.417      -2.339
+emp_var_rate    -0.8832      0.016    -55.252      0.000      -0.915      -0.852
+================================================================================
 
-Resultados Univariados:
-Variable  Coefficient  Standard Error      P-value
-      X1    -0.033460        0.034585 3.333160e-01
-      X2    -0.664597        0.120235 3.248999e-08
-      X3     0.128153        0.012161 5.794725e-26
-      X4     0.077187        0.025179 2.173230e-03
-      X5     0.079744        0.024666 1.225293e-03
-      X6    -0.003590        0.003508 3.060557e-01
-
-Variáveis selecionadas para multivariada: ['X2', 'X3', 'X4', 'X5']
-Scatter plot for X1 saved to scatter_plot_X1.png
-Scatter plot for X2 saved to scatter_plot_X2.png
-Scatter plot for X3 saved to scatter_plot_X3.png
-Scatter plot for X4 saved to scatter_plot_X4.png
-Scatter plot for X5 saved to scatter_plot_X5.png
-Scatter plot for X6 saved to scatter_plot_X6.png
-
-Matriz de correlação salva em: matriz_correlacao.png
-
-TRATAMENTO DE COLINEARIDADE (≥60.0%)
-
-Variáveis removidas: 1
-Variável Correlacionada com Correlação
-      X5                 X4       0.66
-
-Variáveis após colinearidade: 5
-
-TRATAMENTO DE MULTICOLINEARIDADE (VIF > 5)
-
-Variáveis removidas: 1
- Iteração Variável Removida  VIF  Variáveis Restantes
-        1                X1 6.51                    4
-
-Variáveis após multicolinearidade: 4
-
-Variáveis disponíveis para modelagem multivariada: ['X2', 'X3', 'X4']
-
-=== COMPARAÇÃO DE MODELOS MULTIVARIADOS ===
-
---- Iteration 1 ---
-Features no modelo: ['X2', 'X3', 'X4']
-Maior P-value: X4 = 0.0000
-Nenhuma variável removida.
-
-=== Modelo Final Multivariado ===
+--- cons_price_idx ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      396
-Method:                           MLE   Df Model:                            3
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.6266
-Time:                        13:30:30   Log-Likelihood:                -103.49
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                 5.510e-75
-==============================================================================
-                 coef    std err          z      P>|z|      [0.025      0.975]
-------------------------------------------------------------------------------
-const         -1.4197      0.396     -3.588      0.000      -2.195      -0.644
-X2            -1.8134      0.262     -6.916      0.000      -2.327      -1.300
-X3             0.1972      0.021      9.316      0.000       0.156       0.239
-X4             0.2781      0.052      5.335      0.000       0.176       0.380
-==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.02608
+Time:                        14:20:36   Log-Likelihood:                -14121.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                1.729e-166
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const             -2.1347      0.017   -128.906      0.000      -2.167      -2.102
+cons_price_idx    -0.4274      0.016    -27.218      0.000      -0.458      -0.397
+==================================================================================
 
-MODELAGEM FINAL
-
-RESUMO DO MODELO FINAL:
+--- cons_conf_idx ---
                            Logit Regression Results                           
 ==============================================================================
-Dep. Variable:                      y   No. Observations:                  400
-Model:                          Logit   Df Residuals:                      396
-Method:                           MLE   Df Model:                            3
-Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.6266
-Time:                        13:30:30   Log-Likelihood:                -103.49
-converged:                       True   LL-Null:                       -277.18
-Covariance Type:            nonrobust   LLR p-value:                 5.510e-75
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.004229
+Time:                        14:20:36   Log-Likelihood:                -14438.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 1.677e-28
+=================================================================================
+                    coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            -2.0753      0.016   -131.829      0.000      -2.106      -2.044
+cons_conf_idx     0.1708      0.015     11.113      0.000       0.141       0.201
+=================================================================================
+
+--- euribor3m ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.1261
+Time:                        14:20:36   Log-Likelihood:                -12671.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
 ==============================================================================
                  coef    std err          z      P>|z|      [0.025      0.975]
 ------------------------------------------------------------------------------
-const         -0.3202      0.182     -1.756      0.079      -0.678       0.037
-X2            -1.6609      0.240     -6.916      0.000      -2.132      -1.190
-X3             3.7395      0.401      9.316      0.000       2.953       4.526
-X4             1.1356      0.213      5.335      0.000       0.718       1.553
+const         -2.4161      0.021   -117.344      0.000      -2.456      -2.376
+euribor3m     -0.9307      0.017    -56.202      0.000      -0.963      -0.898
 ==============================================================================
 
-RANKING DE VARIÁVEIS:
-Feature  Ranking  Suporte
-     X2        1     True
-     X3        1     True
-     X4        1     True
-     X6        2    False
+--- nr_employed ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.1543
+Time:                        14:20:36   Log-Likelihood:                -12263.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                     0.000
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -2.4374      0.020   -120.381      0.000      -2.477      -2.398
+nr_employed    -0.9581      0.015    -63.687      0.000      -0.988      -0.929
+===============================================================================
 
-VARIÁVEIS SIGNIFICATIVAS (p < 0.05):
-       Coef.         P>|z|
-X3  3.739476  1.212018e-20
-X2 -1.660944  4.636749e-12
-X4  1.135552  9.533529e-08
+--- job_admin. ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001365
+Time:                        14:20:36   Log-Likelihood:                -14480.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 3.133e-10
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.0675      0.016   -132.246      0.000      -2.098      -2.037
+job_admin.     0.0955      0.015      6.368      0.000       0.066       0.125
+==============================================================================
+
+--- job_blue-collar ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.008680
+Time:                        14:20:36   Log-Likelihood:                -14374.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 1.100e-56
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -2.0913      0.016   -130.525      0.000      -2.123      -2.060
+job_blue-collar    -0.2755      0.019    -14.875      0.000      -0.312      -0.239
+===================================================================================
+
+--- job_entrepreneur ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               0.0004243
+Time:                        14:20:37   Log-Likelihood:                -14493.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 0.0004519
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const               -2.0652      0.016   -132.347      0.000      -2.096      -2.035
+job_entrepreneur    -0.0591      0.018     -3.364      0.001      -0.094      -0.025
+====================================================================================
+
+--- job_housemaid ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               6.213e-05
+Time:                        14:20:37   Log-Likelihood:                -14498.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.1795
+=================================================================================
+                    coef    std err          z      P>|z|      [0.025      0.975]
+---------------------------------------------------------------------------------
+const            -2.0641      0.016   -132.422      0.000      -2.095      -2.034
+job_housemaid    -0.0216      0.016     -1.319      0.187      -0.054       0.011
+=================================================================================
+
+--- job_management ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               2.496e-07
+Time:                        14:20:37   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.9322
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const             -2.0639      0.016   -132.433      0.000      -2.094      -2.033
+job_management    -0.0013      0.016     -0.085      0.932      -0.032       0.029
+==================================================================================
+
+--- job_retired ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.009460
+Time:                        14:20:37   Log-Likelihood:                -14362.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 1.299e-61
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -2.0829      0.016   -131.804      0.000      -2.114      -2.052
+job_retired     0.2081      0.012     17.975      0.000       0.185       0.231
+===============================================================================
+
+--- job_self-employed ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               3.150e-05
+Time:                        14:20:37   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.3392
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                -2.0640      0.016   -132.428      0.000      -2.095      -2.033
+job_self-employed    -0.0152      0.016     -0.946      0.344      -0.047       0.016
+=====================================================================================
+
+--- job_services ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001607
+Time:                        14:20:37   Log-Likelihood:                -14476.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 8.663e-12
+================================================================================
+                   coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const           -2.0688      0.016   -132.101      0.000      -2.100      -2.038
+job_services    -0.1159      0.018     -6.517      0.000      -0.151      -0.081
+================================================================================
+
+--- job_student ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.009062
+Time:                        14:20:37   Log-Likelihood:                -14368.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 4.265e-59
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -2.0802      0.016   -131.960      0.000      -2.111      -2.049
+job_student     0.1915      0.011     17.814      0.000       0.170       0.213
+===============================================================================
+
+--- job_technician ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               5.420e-05
+Time:                        14:20:38   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.2100
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const             -2.0641      0.016   -132.425      0.000      -2.095      -2.034
+job_technician    -0.0197      0.016     -1.248      0.212      -0.051       0.011
+==================================================================================
+
+--- job_unemployed ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               0.0002889
+Time:                        14:20:38   Log-Likelihood:                -14495.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                  0.003800
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const             -2.0646      0.016   -132.399      0.000      -2.095      -2.034
+job_unemployed     0.0423      0.014      2.985      0.003       0.015       0.070
+==================================================================================
+
+--- job_unknown ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               3.273e-08
+Time:                        14:20:38   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.9754
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -2.0639      0.016   -132.433      0.000      -2.094      -2.033
+job_unknown    -0.0005      0.016     -0.031      0.975      -0.031       0.030
+===============================================================================
+
+--- marital_divorced ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               0.0001634
+Time:                        14:20:38   Log-Likelihood:                -14497.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                   0.02950
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const               -2.0644      0.016   -132.406      0.000      -2.095      -2.034
+marital_divorced    -0.0347      0.016     -2.152      0.031      -0.066      -0.003
+====================================================================================
+
+--- marital_married ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.002641
+Time:                        14:20:38   Log-Likelihood:                -14461.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 2.114e-18
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -2.0710      0.016   -132.052      0.000      -2.102      -2.040
+marital_married    -0.1348      0.015     -8.788      0.000      -0.165      -0.105
+===================================================================================
+
+--- marital_single ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.004007
+Time:                        14:20:38   Log-Likelihood:                -14441.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 4.281e-27
+==================================================================================
+                     coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------
+const             -2.0743      0.016   -131.905      0.000      -2.105      -2.044
+marital_single     0.1621      0.015     10.943      0.000       0.133       0.191
+==================================================================================
+
+--- marital_unknown ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               3.538e-05
+Time:                        14:20:38   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.3111
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -2.0640      0.016   -132.429      0.000      -2.095      -2.033
+marital_unknown     0.0145      0.014      1.053      0.292      -0.013       0.042
+===================================================================================
+
+--- education_Basic ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.004250
+Time:                        14:20:38   Log-Likelihood:                -14438.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 1.232e-28
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -2.0763      0.016   -131.678      0.000      -2.107      -2.045
+education_Basic    -0.1811      0.017    -10.811      0.000      -0.214      -0.148
+===================================================================================
+
+--- education_High School ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               7.951e-05
+Time:                        14:20:39   Log-Likelihood:                -14498.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.1289
+=========================================================================================
+                            coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+const                    -2.0641      0.016   -132.421      0.000      -2.095      -2.034
+education_High School    -0.0239      0.016     -1.512      0.130      -0.055       0.007
+=========================================================================================
+
+--- education_Illiterate ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               6.019e-05
+Time:                        14:20:39   Log-Likelihood:                -14498.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.1864
+========================================================================================
+                           coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                   -2.0640      0.016   -132.429      0.000      -2.095      -2.033
+education_Illiterate     0.0170      0.012      1.431      0.152      -0.006       0.040
+========================================================================================
+
+--- education_Professional Course ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               1.427e-06
+Time:                        14:20:39   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.8388
+=================================================================================================
+                                    coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------------------
+const                            -2.0639      0.016   -132.433      0.000      -2.094      -2.033
+education_Professional Course     0.0032      0.016      0.204      0.839      -0.027       0.034
+=================================================================================================
+
+--- education_University Degree ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.003487
+Time:                        14:20:39   Log-Likelihood:                -14449.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 8.655e-24
+===============================================================================================
+                                  coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------------
+const                          -2.0731      0.016   -131.964      0.000      -2.104      -2.042
+education_University Degree     0.1520      0.015     10.187      0.000       0.123       0.181
+===============================================================================================
+
+--- education_Unknown ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               0.0006067
+Time:                        14:20:39   Log-Likelihood:                -14491.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 2.735e-05
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                -2.0654      0.016   -132.362      0.000      -2.096      -2.035
+education_Unknown     0.0610      0.014      4.334      0.000       0.033       0.089
+=====================================================================================
+
+--- default_no ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.01639
+Time:                        14:20:40   Log-Likelihood:                -14262.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                2.199e-105
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.1208      0.017   -127.897      0.000      -2.153      -2.088
+default_no     0.4070      0.021     19.440      0.000       0.366       0.448
+==============================================================================
+
+--- default_unknown ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.01637
+Time:                        14:20:40   Log-Likelihood:                -14262.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                2.839e-105
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -2.1207      0.017   -127.903      0.000      -2.153      -2.088
+default_unknown    -0.4068      0.021    -19.430      0.000      -0.448      -0.366
+===================================================================================
+
+--- default_yes ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               2.473e-05
+Time:                        14:20:42   Log-Likelihood:                -14499.
+converged:                      False   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.3971
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -2.0659    170.253     -0.012      0.990    -335.755     331.623
+default_yes    -0.2421   1.99e+04  -1.21e-05      1.000   -3.91e+04    3.91e+04
+===============================================================================
+
+--- housing_no ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               0.0001749
+Time:                        14:20:42   Log-Likelihood:                -14497.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                   0.02433
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.0644      0.016   -132.406      0.000      -2.095      -2.034
+housing_no    -0.0352      0.016     -2.249      0.024      -0.066      -0.005
+==============================================================================
+
+--- housing_unknown ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               7.405e-06
+Time:                        14:20:42   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.6431
+===================================================================================
+                      coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const              -2.0639      0.016   -132.432      0.000      -2.094      -2.033
+housing_unknown    -0.0073      0.016     -0.461      0.645      -0.038       0.024
+===================================================================================
+
+--- housing_yes ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               0.0001961
+Time:                        14:20:42   Log-Likelihood:                -14497.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                   0.01710
+===============================================================================
+                  coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------
+const          -2.0644      0.016   -132.403      0.000      -2.095      -2.034
+housing_yes     0.0372      0.016      2.383      0.017       0.007       0.068
+===============================================================================
+
+--- loan_no ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               3.755e-05
+Time:                        14:20:42   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.2967
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.0640      0.016   -132.427      0.000      -2.095      -2.033
+loan_no        0.0164      0.016      1.040      0.299      -0.015       0.047
+==============================================================================
+
+--- loan_unknown ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               7.405e-06
+Time:                        14:20:43   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.6431
+================================================================================
+                   coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------
+const           -2.0639      0.016   -132.432      0.000      -2.094      -2.033
+loan_unknown    -0.0073      0.016     -0.461      0.645      -0.038       0.024
+================================================================================
+
+--- loan_yes ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:               2.853e-05
+Time:                        14:20:43   Log-Likelihood:                -14499.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                    0.3630
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.0640      0.016   -132.429      0.000      -2.095      -2.033
+loan_yes      -0.0143      0.016     -0.906      0.365      -0.045       0.017
+==============================================================================
+
+--- contact_cellular ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.03308
+Time:                        14:20:43   Log-Likelihood:                -14020.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                1.245e-210
+====================================================================================
+                       coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------------
+const               -2.1722      0.017   -125.099      0.000      -2.206      -2.138
+contact_cellular     0.5496      0.020     28.141      0.000       0.511       0.588
+====================================================================================
+
+--- contact_telephone ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.03308
+Time:                        14:20:43   Log-Likelihood:                -14020.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                1.245e-210
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                -2.1722      0.017   -125.099      0.000      -2.206      -2.138
+contact_telephone    -0.5496      0.020    -28.141      0.000      -0.588      -0.511
+=====================================================================================
+
+--- month_apr ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                41188
+Model:                          Logit   Df Residuals:                    41186
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.006927
+Time:                        14:20:44   Log-Likelihood:                -14399.
+converged:                       True   LL-Null:                       -14499.
+Covariance Type:            nonrobust   LLR p-value:                 1.337e-45
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.0791      0.016   -131.855      0.000      -2.110      -2.048
+month_apr      0.1888      0.012     15.119      0.000       0.164       0.213
+==============================================================================
+
+--- month_aug ---
