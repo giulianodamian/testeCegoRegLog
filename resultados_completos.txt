@@ -1,21 +1,205 @@
-RELATÓRIO DE SELEÇÃO DE VARIÁVEIS
+RELATÓRIO DE ANÁLISE ESTATÍSTICA
 ==================================================
 
 Dados carregados: 400 registros, 7 colunas
 
-Variáveis numéricas finais: 6
+=== ANÁLISE UNIVARIADA ===
 
-=== RESULTADO FINAL ===
-Threshold de p-value: 0.25
-Threshold de influência: 20%
-Total de iterações: 1
+--- X1 ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      398
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001692
+Time:                        13:30:28   Log-Likelihood:                -276.71
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                    0.3328
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.5509      0.538     -1.025      0.305      -1.605       0.503
+X1            -0.0335      0.035     -0.967      0.333      -0.101       0.034
+==============================================================================
 
-Features mantidas (5):
-- X1: p-value original=0.2368, final=0.2256
-- X2: p-value original=0.0000, final=0.0000
-- X3: p-value original=0.0000, final=0.0000
-- X4: p-value original=0.0057, final=0.0049
-- X5: p-value original=0.0056, final=0.0056
+--- X2 ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      398
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.06064
+Time:                        13:30:28   Log-Likelihood:                -260.37
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                 6.721e-09
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.9885      0.213      4.641      0.000       0.571       1.406
+X2            -0.6646      0.120     -5.527      0.000      -0.900      -0.429
+==============================================================================
 
-Features removidas (1):
-- X6: p-value=0.6842
+--- X3 ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      398
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.4456
+Time:                        13:30:28   Log-Likelihood:                -153.66
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                 1.152e-55
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -2.6196      0.284     -9.218      0.000      -3.177      -2.063
+X3             0.1282      0.012     10.538      0.000       0.104       0.152
+==============================================================================
+
+--- X4 ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      398
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.01742
+Time:                        13:30:28   Log-Likelihood:                -272.35
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                  0.001885
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0340      0.101     -0.335      0.737      -0.232       0.164
+X4             0.0772      0.025      3.065      0.002       0.028       0.127
+==============================================================================
+
+--- X5 ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      398
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                 0.01954
+Time:                        13:30:28   Log-Likelihood:                -271.76
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                 0.0009968
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.0408      0.101     -0.403      0.687      -0.240       0.158
+X5             0.0797      0.025      3.233      0.001       0.031       0.128
+==============================================================================
+
+--- X6 ---
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      398
+Method:                           MLE   Df Model:                            1
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                0.001894
+Time:                        13:30:28   Log-Likelihood:                -276.65
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                    0.3055
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.1455      0.207      0.703      0.482      -0.260       0.551
+X6            -0.0036      0.004     -1.024      0.306      -0.010       0.003
+==============================================================================
+
+Resultados Univariados:
+Variable  Coefficient  Standard Error      P-value
+      X1    -0.033460        0.034585 3.333160e-01
+      X2    -0.664597        0.120235 3.248999e-08
+      X3     0.128153        0.012161 5.794725e-26
+      X4     0.077187        0.025179 2.173230e-03
+      X5     0.079744        0.024666 1.225293e-03
+      X6    -0.003590        0.003508 3.060557e-01
+
+Variáveis selecionadas para multivariada: ['X2', 'X3', 'X4', 'X5']
+Scatter plot for X1 saved to scatter_plot_X1.png
+Scatter plot for X2 saved to scatter_plot_X2.png
+Scatter plot for X3 saved to scatter_plot_X3.png
+Scatter plot for X4 saved to scatter_plot_X4.png
+Scatter plot for X5 saved to scatter_plot_X5.png
+Scatter plot for X6 saved to scatter_plot_X6.png
+
+Matriz de correlação salva em: matriz_correlacao.png
+
+TRATAMENTO DE COLINEARIDADE (≥60.0%)
+
+Variáveis removidas: 1
+Variável Correlacionada com Correlação
+      X5                 X4       0.66
+
+Variáveis após colinearidade: 5
+
+TRATAMENTO DE MULTICOLINEARIDADE (VIF > 5)
+
+Variáveis removidas: 1
+ Iteração Variável Removida  VIF  Variáveis Restantes
+        1                X1 6.51                    4
+
+Variáveis após multicolinearidade: 4
+
+Variáveis disponíveis para modelagem multivariada: ['X2', 'X3', 'X4']
+
+=== COMPARAÇÃO DE MODELOS MULTIVARIADOS ===
+
+--- Iteration 1 ---
+Features no modelo: ['X2', 'X3', 'X4']
+Maior P-value: X4 = 0.0000
+Nenhuma variável removida.
+
+=== Modelo Final Multivariado ===
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      396
+Method:                           MLE   Df Model:                            3
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.6266
+Time:                        13:30:30   Log-Likelihood:                -103.49
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                 5.510e-75
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -1.4197      0.396     -3.588      0.000      -2.195      -0.644
+X2            -1.8134      0.262     -6.916      0.000      -2.327      -1.300
+X3             0.1972      0.021      9.316      0.000       0.156       0.239
+X4             0.2781      0.052      5.335      0.000       0.176       0.380
+==============================================================================
+
+MODELAGEM FINAL
+
+RESUMO DO MODELO FINAL:
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:                      y   No. Observations:                  400
+Model:                          Logit   Df Residuals:                      396
+Method:                           MLE   Df Model:                            3
+Date:                Fri, 04 Apr 2025   Pseudo R-squ.:                  0.6266
+Time:                        13:30:30   Log-Likelihood:                -103.49
+converged:                       True   LL-Null:                       -277.18
+Covariance Type:            nonrobust   LLR p-value:                 5.510e-75
+==============================================================================
+                 coef    std err          z      P>|z|      [0.025      0.975]
+------------------------------------------------------------------------------
+const         -0.3202      0.182     -1.756      0.079      -0.678       0.037
+X2            -1.6609      0.240     -6.916      0.000      -2.132      -1.190
+X3             3.7395      0.401      9.316      0.000       2.953       4.526
+X4             1.1356      0.213      5.335      0.000       0.718       1.553
+==============================================================================
+
+RANKING DE VARIÁVEIS:
+Feature  Ranking  Suporte
+     X2        1     True
+     X3        1     True
+     X4        1     True
+     X6        2    False
+
+VARIÁVEIS SIGNIFICATIVAS (p < 0.05):
+       Coef.         P>|z|
+X3  3.739476  1.212018e-20
+X2 -1.660944  4.636749e-12
+X4  1.135552  9.533529e-08
